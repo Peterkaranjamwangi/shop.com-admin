@@ -35,6 +35,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import NewProduct from "./new/page";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Next.js Tables | Shop.com - Next.js Dashboard Template",
@@ -46,7 +47,8 @@ export default function page() {
   return (
     <>
       <DefaultLayout>
-        <div>Products</div>
+        <Breadcrumb pageName="Products" />
+
         <ProductsDashboard />
       </DefaultLayout>
     </>

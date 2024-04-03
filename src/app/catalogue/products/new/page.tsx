@@ -34,11 +34,14 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 export default function NewProduct() {
   return (
     <DefaultLayout>
-      <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+      <Breadcrumb pageName="New Product" />
+
+      <div className="grid max-w-full flex-1 items-start gap-4 px-1 md:gap-8 md:p-4">
         <div className="mx-auto grid max-w-[59rem] flex-1 auto-rows-max gap-4">
           <div className="flex items-center gap-4">
             <Button variant="outline" size="icon" className="h-7 w-7">
@@ -360,7 +363,7 @@ export default function NewProduct() {
             <Button size="sm">Save Product</Button>
           </div>
         </div>
-      </main>
+      </div>
     </DefaultLayout>
   );
 }

@@ -29,8 +29,8 @@ export const SideNavItems: SideNavItem[] = [
         image: "/categories.png",
       },
       {
-        name: "Coupon",
-        link: "/catalogue/coupon",
+        name: "Coupons",
+        link: "/catalogue/coupons",
         image: "/coupon.png",
       },
       {
@@ -95,36 +95,14 @@ export const SideNavItems: SideNavItem[] = [
       },
     ],
   },
-  {
-    name: "Calendar",
-    link: "/calendar",
-    image: "/calendar.png",
-    subitem: false,
-  },
+
   {
     name: "Profile",
     link: "/profile",
     image: "/profile.png",
     subitem: false,
   },
-  {
-    name: "Forms",
-    link: "/forms",
-    image: "/forms.png",
-    subitem: true,
-    subItems: [
-      {
-        name: "Form Elements",
-        link: "/forms/form-elements",
-        image: "/formelements.png",
-      },
-      {
-        name: "Form Layout",
-        link: "/forms/form-layout",
-        image: "/formelements.png",
-      },
-    ],
-  },
+
   {
     name: "Tables",
     link: "/tables",
@@ -137,30 +115,7 @@ export const SideNavItems: SideNavItem[] = [
     image: "/settings.png",
     subitem: false,
   },
-  {
-    name: "Chart",
-    link: "/chart",
-    image: "/chart.png",
-    subitem: false,
-  },
-  {
-    name: "UI Elements",
-    link: "/ui",
-    image: "/ui.png",
-    subitem: true,
-    subItems: [
-      {
-        name: "Alerts",
-        link: "/ui/alerts",
-        image: "/alerts.png",
-      },
-      {
-        name: "Buttons",
-        link: "/ui/buttons",
-        image: "/buttons.png",
-      },
-    ],
-  },
+
   {
     name: "Authentication",
     link: "/auth",

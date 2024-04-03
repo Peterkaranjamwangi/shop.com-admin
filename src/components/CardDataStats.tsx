@@ -1,3 +1,4 @@
+import { ArrowUp, ArrowDown } from "lucide-react";
 import React, { ReactNode } from "react";
 
 interface CardDataStatsProps {
@@ -39,34 +40,10 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
           {rate}
 
           {levelUp && (
-            <svg
-              className="fill-meta-3"
-              width="10"
-              height="11"
-              viewBox="0 0 10 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.35716 2.47737L0.908974 5.82987L5.0443e-07 4.94612L5 0.0848689L10 4.94612L9.09103 5.82987L5.64284 2.47737L5.64284 10.0849L4.35716 10.0849L4.35716 2.47737Z"
-                fill=""
-              />
-            </svg>
+            <ArrowUp className="fill-meta-3" size={24} />
           )}
           {levelDown && (
-            <svg
-              className="fill-meta-5"
-              width="10"
-              height="11"
-              viewBox="0 0 10 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.64284 7.69237L9.09102 4.33987L10 5.22362L5 10.0849L-8.98488e-07 5.22362L0.908973 4.33987L4.35716 7.69237L4.35716 0.0848701L5.64284 0.0848704L5.64284 7.69237Z"
-                fill=""
-              />
-            </svg>
+            <ArrowDown className="fill-meta-5" size={24} />
           )}
         </span>
       </div>
@@ -75,3 +52,58 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
 };
 
 export default CardDataStats;
+
+// export default function CardDataStatse() {
+//   return (
+//     <div>
+//        <Card>
+//           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+//             <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
+//             <DollarSign className="text-muted-foreground h-4 w-4" />
+//           </CardHeader>
+//           <CardContent>
+//             <div className="text-2xl font-bold">$45,231.89</div>
+//             <p className="text-muted-foreground text-xs">
+//               +20.1% from last month
+//             </p>
+//           </CardContent>
+//         </Card>
+//         <Card>
+//           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+//             <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
+//             <Users className="text-muted-foreground h-4 w-4" />
+//           </CardHeader>
+//           <CardContent>
+//             <div className="text-2xl font-bold">+2350</div>
+//             <p className="text-muted-foreground text-xs">
+//               +180.1% from last month
+//             </p>
+//           </CardContent>
+//         </Card>
+//         <Card>
+//           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+//             <CardTitle className="text-sm font-medium">Sales</CardTitle>
+//             <CreditCard className="text-muted-foreground h-4 w-4" />
+//           </CardHeader>
+//           <CardContent>
+//             <div className="text-2xl font-bold">+12,234</div>
+//             <p className="text-muted-foreground text-xs">
+//               +19% from last month
+//             </p>
+//           </CardContent>
+//         </Card>
+//         <Card>
+//           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+//             <CardTitle className="text-sm font-medium">Active Now</CardTitle>
+//             <Activity className="text-muted-foreground h-4 w-4" />
+//           </CardHeader>
+//           <CardContent>
+//             <div className="text-2xl font-bold">+573</div>
+//             <p className="text-muted-foreground text-xs">
+//               +201 since last hour
+//             </p>
+//           </CardContent>
+//         </Card>
+//     </div>
+//   )
+// }

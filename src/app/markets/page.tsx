@@ -2,6 +2,7 @@ import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import React from "react";
 
 import { Metadata } from "next";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 export const metadata: Metadata = {
   title: "Next.js Tables | Shop.com - Next.js Dashboard Template",
   description:
@@ -12,7 +13,7 @@ export default function page() {
   return (
     <>
       <DefaultLayout>
-        <div>Markets</div>
+        <Breadcrumb pageName="Markets" />
       </DefaultLayout>
     </>
   );

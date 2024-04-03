@@ -15,6 +15,7 @@ import { Progress } from "@/components/ui/progress";
 import { Metadata } from "next";
 import LatestOrder from "./LatestOrder";
 import RecentOrders from "./RecentOrders";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 export const metadata: Metadata = {
   title: "Next.js Tables | Shop.com - Next.js Dashboard Template",
   description:
@@ -25,7 +26,8 @@ export default function page() {
   return (
     <>
       <DefaultLayout>
-        <div>Orders</div>
+        <Breadcrumb pageName="Orders" />
+
         <OrdersDashboard />
       </DefaultLayout>
     </>

@@ -35,7 +35,7 @@ import {
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 import { useMediaQuery } from "@react-hook/media-query";
-import { FolderPlus, ImagePlus, X } from "lucide-react";
+import { FolderPlus, ImagePlus, PlusCircle, X } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { ComponentPlaceholderIcon } from "@radix-ui/react-icons";
 
@@ -47,7 +47,10 @@ export default function NewCategory() {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline">Create New Category</Button>
+          <Button variant="outline">
+            <FolderPlus className="mr-2 h-4 w-4  text-black" />
+            Create New Category
+          </Button>
         </DialogTrigger>
         <DialogContent className=" bg-white text-black dark:bg-black dark:text-white sm:max-w-[425px]">
           <DialogHeader>
@@ -72,7 +75,7 @@ export default function NewCategory() {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
         <Button variant="outline">
-          <FolderPlus className="mr-2 h-4 w-4" />
+          <FolderPlus className="mr-2 h-4 w-4  text-black" />
           Add New Category
         </Button>
       </DrawerTrigger>
