@@ -12,6 +12,7 @@ import {
 import SidebarLinkGroup from "./SidebarLinkGroup";
 import { SideNavItems } from "../../../constants/constants";
 import { Button } from "../ui/button";
+import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
 const logo = "/logo-no-bg.png";
 
 interface SidebarProps {
@@ -69,7 +70,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-99999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      className={`absolute left-0 top-0 z-99999 flex h-screen w-60 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -79,15 +80,17 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           <Image width={176} height={32} src={logo} alt="Logo" priority />
         </Link>
 
-        <button
+        <Button
           ref={trigger}
           onClick={() => setSidebarOpen(!sidebarOpen)}
           aria-controls="sidebar"
           aria-expanded={sidebarOpen}
-          className="block lg:hidden"
+          className="flex items-center justify-center border p-1 text-white lg:hidden"
+          variant="outline"
+          size="icon"
         >
-          <PanelLeftClose />
-        </button>
+          <PanelLeftClose className="h-10 w-10" />
+        </Button>
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
       <div className=" flex flex-col overflow-y-auto duration-300 ease-linear">

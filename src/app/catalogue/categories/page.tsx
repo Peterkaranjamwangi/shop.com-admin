@@ -2,21 +2,11 @@ import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import React from "react";
 
 import { Metadata } from "next";
-import Header from "@/components/Header";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { buttonVariants } from "@/components/ui/button";
-
-import { EnvelopeOpenIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import { FolderPlus } from "lucide-react";
+import TableActions from "@/components/TableActions";
+import PageHeaders from "@/components/PageHeaders";
+import NewCategory from "./NewCategory";
+import UpdateCategory from "./update/[id]/UpdateCategory";
 
 export const metadata: Metadata = {
   title: "Next.js Tables | Shop.com - Next.js Dashboard Template",
@@ -28,32 +18,26 @@ export default function page() {
   return (
     <>
       <DefaultLayout>
-        <Card>
-          {/* header  */}
-          <CardHeader>
-            <CardTitle>
-              <div className="flex flex-row justify-between">
-                <div>Categories</div>
+        {/* header  */}
+        {/* <PageHeaders
+          heading="Categories"
+          linkTitle="Create New Category"
+          href="/catalogue/categories/new"
+        /> */}
+        <div className="flex flex-row justify-between py-2">
+          <div>Categories</div>
+          <NewCategory />
+        </div>
+        <UpdateCategory />
 
-                <Link
-                  href="/catalogue/categories/new"
-                  className={buttonVariants({ variant: "outline" })}
-                >
-                  <FolderPlus className="mr-2 h-4 w-4" />
-                  Create New Category
-                </Link>
-              </div>
-            </CardTitle>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          {/* Table  */}
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
+        <div className="my-1 rounded border p-2">
+          {/* Table Actions */}
+          <TableActions />
+          {/* table  */}
+          <div className="my-2 p-2">
+            <h1 className="text-5xl">Table</h1>
+          </div>
+        </div>
       </DefaultLayout>
     </>
   );

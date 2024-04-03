@@ -13,8 +13,8 @@ const Header = (props: {
 }) => {
   return (
     <header className="sticky top-0 z-999 flex w-full bg-white  drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
-      <div className="flex flex-grow items-center justify-between px-2 py-2 shadow-2 md:px-4 2xl:px-11">
-        <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+      <div className="flex flex-grow items-center justify-between gap-8 px-2 py-2 shadow-2 md:px-4 2xl:px-11">
+        <div className="flex items-center  gap-1 sm:gap-2 lg:hidden">
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-controls="sidebar"
@@ -33,8 +33,8 @@ const Header = (props: {
 
           <Link className="block flex-shrink-0 lg:hidden" href="/">
             <Image
-              width={80}
-              height={52}
+              width={100}
+              height={88}
               src={logo_flat}
               alt="Logo"
               className="rounded-md"
@@ -42,11 +42,11 @@ const Header = (props: {
           </Link>
         </div>
 
-        <div className="hidden rounded-md border sm:block md:ml-8 md:mr-4 lg:ml-0 lg:mr-0">
+        <div className="hidden w-auto rounded-md border sm:block">
           <form action="#" method="POST">
             <div className="relative">
               <button className="absolute left-0 top-1/2 -translate-y-1/2">
-                <Search className="fill-body text-black" size={20} />
+                <Search className=" text-black dark:text-white" size={20} />
               </button>
 
               <input
@@ -58,8 +58,8 @@ const Header = (props: {
           </form>
         </div>
 
-        <div className="flex items-center gap-3 2xsm:gap-7">
-          <ul className="flex items-center gap-2 2xsm:gap-4">
+        <div className="flex items-center justify-between gap-2">
+          <ul className="flex items-center gap-2">
             {/* <!-- Dark Mode Toggler --> */}
             <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
